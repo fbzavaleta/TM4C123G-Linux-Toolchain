@@ -1,12 +1,5 @@
 /*
-Firmware para Lectura de métricas LDR y envio de datos a la 
-plataforma microcontrolada por comunicación UART
---
---
-Autor: Eng. Francis B.Z. Castro
-Hardware & Software Engineer - Data Specialist
---
---
+Example to blind the LED on the Tiva C Launchpad
 */
 #include <stdbool.h>
 #include <stdint.h>
@@ -21,8 +14,6 @@ Hardware & Software Engineer - Data Specialist
 #include <driverlib/sysctl.h>
 #include <inc/hw_sysctl.h>
 #include <driverlib/pin_map.h>
-#include <driverlib/can.h>
-#include <driverlib/adc.h>
 #include <driverlib/timer.h>
 #include "clib.h"
 
