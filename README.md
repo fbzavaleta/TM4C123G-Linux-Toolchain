@@ -12,7 +12,7 @@ The TM4C123G-Linux-Toolchain is a robust and open-source toolkit specifically de
 
 - **Flashing**: comand based  flashing process, allowing you to deploy your applications effortlessly.
 
-- **Debugging**: Debug your TM4C123G projects with precision and reliability, using one single comand.
+- **Debugging**: Debug your TM4C123G projects with precision and reliability, using one single comTM4C123G-Linux-Toolchainand.
 
 - **IDE Compatibility**: Designed to work seamlessly with generic IDEs, making it accessible and adaptable for a wide range of development workflows.
 
