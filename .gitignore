@@ -6,3 +6,4 @@
 *.dll
 *.uvproj
 *.html
+.vscode
