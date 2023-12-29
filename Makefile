@@ -15,8 +15,6 @@ TARGET = main
 MCU = TM4C123GH6PM
 # SOURCES: list of input source sources
 SOURCES = main.c startup_gcc.c system_TM4C123.c clib.c
-# INCLUDES: list of includes, by default, use Includes directory
-INCLUDES = -IInclude
 # OUTDIR: directory to use for output
 OUTDIR = build
 # TIVAWARE_PATH: path to tivaware folder & lm4flash
@@ -48,6 +46,7 @@ LD = arm-none-eabi-ld
 AR = arm-none-eabi-ar
 AS = arm-none-eabi-as
 L4 = $(LM4FLASH_PATH)/lm4flash
+DB = arm-none-eabi-gdb
 
 BIN_FIRMWARE = $(OUTDIR)/$(TARGET).bin
 OBJCOPY = arm-none-eabi-objcopy
@@ -79,6 +78,6 @@ flash:
 	$(L4) $(BIN_FIRMWARE)
 
 debug: 
-	 arm-none-eabi-gdb -ex 'target extended-remote | openocd -f board/ek-tm4c1294xl.cfg -c "gdb_port pipe; log_output openocd.log"; monitor reset; monitor halt'
+	 $(DB) -ex 'target extended-remote | openocd -f board/ek-tm4c1294xl.cfg -c "gdb_port pipe; log_output openocd.log"; monitor reset; monitor halt'
 
 .PHONY: all clean
